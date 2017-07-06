@@ -7,6 +7,11 @@
 1. Easy to use
 2. Unencrypted code for easy customization
 3. Compatible for layman user
+
+___________________________________________________________________________________________________
+##Usage
+
+After installing the extension, access the UI by visiting {{base_url}}/shell e.g. http://mymagentourl.com/shell
 ___________________________________________________________________________________________________
 
 More courses and tutorials about Magento 2 visit:
