@@ -9,7 +9,7 @@
 3. Compatible for layman user
 
 ___________________________________________________________________________________________________
-##Usage
+## Usage
 
 After installing the extension, access the UI by visiting {{base_url}}/shell e.g. http://mymagentourl.com/shell
 ___________________________________________________________________________________________________
