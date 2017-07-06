@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<page layout="empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <link src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" src_type="url" rel="stylesheet" type="text/css" />
+        <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" rel="stylesheet" type="text/css" />
+        <link src="https://fonts.googleapis.com/css?family=Ubuntu" src_type="url" rel="stylesheet" type="text/css" />
+        <link src="TheCodingTutor_Shell::js/functions.js"/>
+        <link src="TheCodingTutor_Shell::js/script.js"/>
+    </head>
+	<body>
+		<referenceContainer name="content">
+			<block class="TheCodingTutor\Shell\Block\Index\Index" name="index.index" template="TheCodingTutor_Shell::index/index.phtml"/>
+		</referenceContainer>
+	</body>
+</page>
