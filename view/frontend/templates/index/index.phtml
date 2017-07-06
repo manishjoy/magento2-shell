@@ -1,0 +1,88 @@
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1>Processing an AJAX Form</h1>
+
+	<!-- OUR FORM -->
+	<form class="form" id="form" data-mage-init='{"validation": {}}' action="#" method="POST">
+		
+		<div id="path-group" class="form-group required">
+			<label for="path"><?php echo __('Path of Magento Root Directory'); ?></label>
+			<input type="text" class="form-control input-text" data-validate="{required:true}" name="path" placeholder="<?php echo 'e.g. '.BP; ?>" />
+			<!-- errors will go here -->
+		</div>
+
+		<div class="form-group">
+			<div class="base-path">
+				<span class="label-text"><?php echo __('Your Magento Root Path'); ?> : </span>
+				<span class="path"><?php echo BP; ?></span>
+				<span><a id="use-path" val="<?php echo BP; ?>" href="#"><?php echo __('Use') ?></a></span>
+			</div>
+		</div>
+
+		<div id="command-group" class="form-group">
+			<label for="command"><?php echo __('Command'); ?></label>
+			<select name="command" class="form-control input-text" data-validate="{required:true}" id="command">
+				<option value="">--- Select Command ---</option>
+				<optgroup label="Cache">
+					<option value="bin/magento cache:status">Cache Status</option>
+					<option value="bin/magento cache:enable">Cache Enable</option>
+					<option value="bin/magento cache:disable">Cache Disable</option>
+					<option value="bin/magento cache:clean">Cache Clean</option>
+					<option value="bin/magento cache:flush">Cache Flush</option>
+				</optgroup>
+				<optgroup label="Indexer">
+					<option value="bin/magento indexer:reindex">ReIndexer</option>
+					<option value="bin/magento indexer:show-mode">Show Mode</option>
+					<option value="bin/magento indexer:status">Show Indexer Status</option>
+					<option value="bin/magento indexer:info">Indexer Info</option>
+				</optgroup>
+				<optgroup label="Setup Upgrade">
+					<option value="bin/magento setup:upgrade">Run Setup Upgrade</option>
+				</optgroup>
+				<optgroup label="Static Content Deploy">
+					<option value="bin/magento setup:static-content:deploy">Deploy Static View Files</option>
+				</optgroup>
+				<optgroup label="Cron">
+					<option value="bin/magento cron:run">Run Cron</option>
+				</optgroup>
+				<optgroup label="Sample Data Deploy">
+					<option value="bin/magento sampledata:deploy">Deploy Sample Data</option>
+				</optgroup>
+				<optgroup label="DI Compile">
+					<option value="bin/magento setup:di:compile">Run Compile</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<button type="submit" class="btn btn-success"><?php echo __('Run'); ?> <span class="fa fa-arrow-right"></span></button>
+
+	</form>
+	<!-- <div class="cloner">
+		<div class="result-content">
+			<div class="command-text"><span class="user">TCT</span>&nbsp;:<span class="path" id="path"></span>&nbsp;$&nbsp;&nbsp;<span class="command" id="command-display"></span></div>
+		</div>
+	</div> -->
+	<div class="console-container">
+		<div title="Close" class="close-btn sys-btn"><i class="fa fa-close"></i></div>
+		<div title="Minimize" class="minimize-btn sys-btn"><i class="fa fa-minus"></i></div>
+		<div title="Reload" id="reload-btn" class="reload-btn sys-btn"><i class="fa fa-refresh"></i></div>
+		<div class="console" >
+			<div class="result-content">
+				<div class="command-text"><span class="user">TCT</span>&nbsp;:<span class="path" id="path"></span>&nbsp;$&nbsp;&nbsp;<span class="command" id="command-display"></span></div>
+				<div id="alert-success">
+					
+				</div>
+			</div>
+				
+		</div>
+	</div>
+		
+</div>
+<!-- put form validaiton -->
+<script type="text/x-magento-init">
+{
+    "#form": {
+    	"validation": {}
+    }
+}
+</script>
