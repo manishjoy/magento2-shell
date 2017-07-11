@@ -35,6 +35,7 @@ ________________________________________________________________________________
 
 <img width="300" src="https://image.ibb.co/hp3kUa/IMG_20170706_WA0001.jpg" alt="7042427677" title="Donate using Paytm">
 ___________________________________________________________________________________________________
+
 ## Prerequisites
 
 ### Use the following table to verify you have the correct prerequisites to install this Extension.
